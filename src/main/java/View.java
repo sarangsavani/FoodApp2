@@ -42,7 +42,18 @@ public class View extends JFrame implements ActionListener{
         exit.addMenuListener(new thisMenuListener());
         
 
+        JFrame frame = new JFrame("Food One");
+        JFrame1.setBounds(0, 500, 500, 1000);
+        
+        JFrame frame = new JFrame("Food Two");
+        frame.setSize(500, 1000, 500, 1000);
+        
+        
+      
+        
     }
+    
+    
 
     
     @Override
