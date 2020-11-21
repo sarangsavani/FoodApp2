@@ -41,7 +41,6 @@ public class View extends JFrame implements ActionListener{
         menubar.add(exit);
         exit.addMenuListener(new thisMenuListener());
         
-
         JFrame frame = new JFrame("Food One");
         JFrame1.setBounds(0, 500, 500, 1000);
         
