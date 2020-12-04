@@ -1,28 +1,33 @@
+/*
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 
 //database connection class
 public class Db {
 
     public static void main(String[] args) {
 
-        try {
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+            Connection myData = null;
 
-            Connection conn = DriverManager.getConnection("jdbc:odbc:Test");            //Driver for database
+            Statement myStat = null;
 
-            Statement st = conn.createStatement();
+            ResultSet myRes = null;
 
-            String sql = "Select * from Foods";             //SQL command
-
-            ResultSet rs = st.executeQuery(sql);
-
-            while (rs.next()) {
-                System.out.println("\n" + rs.getString(1) + "\t" + rs.getString(2) + "\t" + rs.getString(3) + "\t" + rs.getString(4));
+            
+            try{
+                myData = DriverManager.getConnection("jdbc:derby://localhost:1527/MyDataBase", "APP", "APP");
             }
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
+            catch (SQLException e){
+                e.printStackTrace();
+                
+                
+            }
     }
 }
+
+
+*/
