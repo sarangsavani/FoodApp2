@@ -1,26 +1,20 @@
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JPanel;
 
-public class View {
+public class View extends JFrame implements ActionListener{
+    
+    View(){
+        
+    
 
-    public static void main(String[] args) {
+   
 
-        //frame of the program
-        JFrame frame = new JFrame("FoodApp");
-        frame.setSize(1000, 1000);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-
-        //create the menu bar
-        JMenuBar menubar = new JMenuBar();
-        frame.setJMenuBar(menubar);
-        menubar.setVisible(true);
+      JMenuBar menubar = new JMenuBar();
 
         //Create the main menu tab
         JMenu Menu = new JMenu("Menu");
@@ -37,13 +31,32 @@ public class View {
         // Exits the app
         JMenu exit = new JMenu("Exit");
         menubar.add(exit);
-        Button.addActionListener(new ActionListener(){
+        View mainView = new View();
             
-          public void actionPreformed(ActionEvent e){
-                  System.exit(0);
-          frame.add(button);
+        JButton test = new JButton("test3");
+        test.addActionListener(this);
+          
+          //create the menu bar
+        
+        this.setJMenuBar(menubar);
+        menubar.setVisible(true);
+        
+        
+        //frame of the program
+        this.setTitle("FoodApp");
+        this.setSize(1000, 1000);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
+    }
+    public void actionPreformed(ActionEvent e){
+            System.out.print("Test2");
         }
-          };
+}
+
+       
+       
+        
+
 
 
 
@@ -78,7 +91,7 @@ public class View {
             }
              
 */
-        }
+        
 
-    }
+    
 
