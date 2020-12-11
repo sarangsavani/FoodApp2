@@ -10,9 +10,6 @@ public class View extends JFrame implements ActionListener{
     
     View(){
         
-    
-
-   
 
       JMenuBar menubar = new JMenuBar();
 
@@ -51,6 +48,11 @@ public class View extends JFrame implements ActionListener{
     public void actionPreformed(ActionEvent e){
             System.out.print("Test2");
         }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
        
