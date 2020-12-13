@@ -14,21 +14,21 @@ public class View extends JFrame implements ActionListener{
       JMenuBar menubar = new JMenuBar();
 
         //Create the main menu tab
-        JMenu Menu = new JMenu("Menu");
+        JMenu Menu = new JMenu("Menu");         //menu button
         menubar.add(Menu);
 
         //Create the restart tab
-        JMenu restart = new JMenu("Restart");
+        JMenu restart = new JMenu("Restart");       //Restart button
         menubar.add(restart);
 
         //Create the help tab
-        JMenu help = new JMenu("Help");
+        JMenu help = new JMenu("Help");     //Help button
         menubar.add(help);
 
         // Exits the app
-        JMenu exit = new JMenu("Exit");
+        JMenu exit = new JMenu("Exit");        //Exit button
         menubar.add(exit);
-        View mainView = new View();
+        //View mainView = new View();
             
         JButton test = new JButton("test3");
         test.addActionListener(this);
@@ -55,16 +55,9 @@ public class View extends JFrame implements ActionListener{
     }
 }
 
-       
-       
-        
-
-
-
-
-    /*
-
-        
+        /*
+       Panels() {
+           
         JFrame window = new JFrame("1");
         JPanel pane1_01 = new JPanel();
         JPanel pane1_02 = new JPanel();
@@ -72,7 +65,7 @@ public class View extends JFrame implements ActionListener{
         JLabel text = new JLabel("2");
          
         
-        Panels() {
+       
 
             JFrame frame1 = new JFrame("test1");
             frame1.setSize(500, 500);
@@ -92,8 +85,8 @@ public class View extends JFrame implements ActionListener{
                 window.setVisible(true);
             }
              
-*/
-        
+
 
     
 
+*/

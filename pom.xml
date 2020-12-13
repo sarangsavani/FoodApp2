@@ -52,7 +52,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>View</mainClass>
+                            <mainClass>App</mainClass>
                         </configuration>
                     </execution>
                     <execution>
