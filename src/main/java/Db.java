@@ -1,46 +1,27 @@
 
-import java.sql.ResultSet;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-/*
-//database connection class
 public class Db {
 
-    public static void main(String[] args) {
-
-        Connection myData = null;
-
-        Statement myStat = null;
-
-        ResultSet myRes = null;
-
-        try {
-            myData = DriverManager.getConnection("jdbc:sqlite:myDBbrowser.db");
-        } catch (SQLException ex) {
-            Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, ex);
-            
-            
-        }
-    }
-}
- 
- */
-public class Db {
+    private static Connection con;
+    private static boolean hadData = false;
 
     public static Connection connect() {
-        connection con = null;
+        if (con == null);
+        getConnection();
         try {
             Class.forName("org.sqlite.JDBC");
-            con = DriverManager.getConnection("jdbc:sqlite:myDBbrowser.db");
-            System.out.println("Connected");
+            con = DriverManager.getConnection("jdbc:sqlite:myDBbrowser.db"); //link to the database
+            System.out.println("Connected"); //if it works then this message will show
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e + "");
         }
         return con;
+    }
+
+    private static void getConnection() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
